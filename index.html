@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Workout Quiz</title>
+    <!-- Jost Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Section 1: Intro with Start Buttons -->
+    <section id="intro-section" class="section active">
+        <div class="banner-background" style="background-image: url('assets/img/banner-image.png');"></div>
+        <div class="intro-content">
+            <div class="intro-content-main">
+                <h1>Achieve Your Dream Figure with Quick and Effective Workouts.</h1>
+                <p>Take this 30-second quiz to find out how</p>
+                <form class="start-buttons">
+                    <label>
+                        <input type="radio" name="start" value="women" onclick="startQuiz('women')">
+                        <span><i class="fa-solid fa-venus"></i> Women Start Here</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="start" value="men" onclick="startQuiz('men')">
+                        <span><i class="fa-solid fa-mars"></i> Men Start Here</span>
+                    </label>
+                </form>
+            </div>
+            <div class="company-logos">
+                <img src="assets/img/wh-logo.png" alt="Women's Health">
+                <img src="assets/img/forbes-logo.png" alt="Forbes">
+                <img src="assets/img/mayo-clinic-logo.png" alt="Mayo Clinic">
+                <img src="assets/img/wsj-logo.png" alt="The Wall Street Journal">
+                <img src="assets/img/vogue-logo.png" alt="Vogue">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Quiz with Navigation and Progress Bar -->
+    <section id="quiz-section" class="section">
+        <div class="quiz-section-wrapper">
+            <h2>Achieve Your Dream Figure with Quick and Effective Workouts.</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p id="question-text">Do you think hours of cardio is beneficial for fat loss?</p>
+            <small>(Many people think doing cardio every day is the answer.)</small>
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="answer" value="yes">
+                    <span>Yes</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="no">
+                    <span>No</span>
+                </label>
+                <label>
+                    <input type="radio" name="answer" value="not_sure">
+                    <span>Not Sure</span>
+                </label>
+            </form>
+            <div class="navigation">
+                <button id="prev-button" onclick="prevQuestion()" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                <span id="question-counter">2/5</span>
+                <button id="next-button" onclick="nextQuestion()" disabled><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Loading/Processing Screen -->
+    <section id="loading-section" class="section">
+        <div class="loading-background" style="background-image: url('assets/img/loading-background.png');"></div>
+        <div class="loading-section-content">
+            <h2>Achieve Your Dream Figure with Quick and Effective Workouts.</h2>
+            <p>Please wait while we match you with the best routine for maximum fat loss...</p>
+            <div class="loading-circle-wrap">
+                <div class="loading-circle">
+                    <div class="circle">
+                        <span id="loading-percentage">0<small>%</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Result Display -->
+    <section id="result-section" class="section">
+        <div class="result-section-wrap">
+            <h2>Achieve Your Dream Figure with Quick and Effective Workouts.</h2>
+            <div class="content">
+                <h3>Great News</h3>
+                <p>Your ideal fat burning routine has been calculated!</p>
+                <p>Based on your answers, we’ve identified one simple method that you can start doing TODAY to help maximize results, in mini-mal time</p>
+                <p>Don’t worry... it doesn’t require long hours in the gym, running miles on a treadmill, or some super intense cardio workout.</p>
+                <p>Instead, this little-known “S.I.T. routine” can be done from the convenience of home, using your body’s own resistance, in just 7-minutes a day.</p>
+                <p>But here’s the kicker: The special, hyper-focused movements have the potential to burn fat hours later, even while you sleep!</p>
+                <p>In the free presentation below, world renowned nutrition, fitness and weight loss expert, Meredith Shirk, explains it all.</p>
+                <p>Discover the virtually foolproof way to finally melt off stubborn fat, regardless of your age or activity level, revealing a thinner, leaner, more toned body that you’ll absolutely LOVE!</p>
+                <p>(This major metabolic breakthrough has already helped thousands of women get the body of thei dreams... and you could be next.)</p>
+            </div>
+            <button onclick="watchPresentation()">Watch Presentation Now</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer-section" class="hidden">
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <p>&copy; 2024 Cool Company, All Rights Reserved</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <p class="disclaimer">Content, images, and assets on this site may not be reproduced, transmitted, cached, distributed, or used in any way without prior written consent. This site does not offer professional medical advice or services. The ideas, procedures, and suggestions provided here are not a substitute for consulting your physician and should be used only as part of planning your overall health and fitness plan with medical supervision. Our Terms of Service limit liability, and you must read and agree to them before using this site. This information is not intended to diagnose, treat, cure, or prevent any disease. Your results may differ from any claims or testimonials. Typical results are not guaranteed; most people do not achieve results because they do not take consistent action. The examples shown are of individuals who made lifestyle changes and are not typical. Achieving results requires commitment and adherence to a plan</p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
