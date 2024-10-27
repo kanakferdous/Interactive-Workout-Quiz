@@ -180,7 +180,7 @@ function startLoading() {
     switchSection(loadingSection);
     let progress = 0;
     const loadingInterval = setInterval(() => {
-        progress += 1;
+        progress += 5;
         loadingPercentage.innerText = `${progress}%`;
         const circleSize = 100 * (progress / 100);
         document.querySelector(".circle").style.width = `${circleSize}%`;
