@@ -788,3 +788,189 @@ footer {
     padding: 0px;
   }
 }
+
+@media only screen and (max-width: 572px) {
+  .intro-content h1 {
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 24px;
+  }
+
+  .intro-content p {
+    margin-bottom: 0px;
+    font-size: 20px;
+    line-height: 24.4px;
+  }
+
+  .start-buttons label {
+    padding: 16px;
+    width: 300px;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .start-buttons {
+    margin-top: 140px;
+    gap: 12px;
+  }
+
+  .start-buttons input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+
+  .start-buttons label span {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .company-logos img {
+    height: 16px;
+  }
+
+  #intro-section {
+    padding: 24px 16px;
+  }
+
+  #quiz-section {
+    padding: 24px 16px;
+  }
+
+  .quiz-section-wrapper {
+    padding: 16px;
+  }
+
+  #quiz-section h2 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .progress-bar {
+    height: 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  #question-text {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  small {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  #quiz-form {
+    margin-top: 16px;
+  }
+
+  #quiz-form label {
+    padding: 16px;
+  }
+
+  #quiz-form input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+
+  .navigation {
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  #loading-section {
+    padding: 24px 16px;
+  }
+
+  .loading-background {
+    background-size: 55%;
+  }
+
+  .loading-section-content h2 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  .loading-section-content p {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .loading-circle-wrap {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle span {
+    font-size: 42.6px;
+    line-height: 42.6px;
+  }
+
+  .circle span small {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  #result-section {
+    padding: 24px 16px;
+  }
+
+  #result-section h2 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  #result-section h3 {
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  #result-section p {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  #result-section button {
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .start-buttons {
+    margin-top: 145px;
+  }
+
+  .start-buttons label {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .intro-content h1 {
+    font-size: 26px;
+  }
+
+  #quiz-form label {
+    padding: 12px;
+  }
+
+  #quiz-form label span {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  #quiz-section h2 {
+    font-size: 18px;
+  }
+
+  .progress-bar {
+    height: 12px;
+  }
+
+  #question-counter {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
