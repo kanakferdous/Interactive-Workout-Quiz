@@ -936,6 +936,10 @@ footer {
   #result-section button {
     padding: 16px;
   }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -972,5 +976,16 @@ footer {
   #question-counter {
     font-size: 16px;
     line-height: 120%;
+  }
+
+  #result-section button {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  #result-section p {
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 8px;
   }
 }
